@@ -1,11 +1,21 @@
 import React from 'react';
-import LoginForm from './LoginForm';
+import { Route, Routes } from 'react-router-dom';
+
+import Header from './components/Header';
+import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
-    <div className="container">
-      <LoginForm />
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
+      <Footer />
+    </>
   );
 };
 
