@@ -14,7 +14,7 @@ const HomePage = () => {
       <hr />
       <button onClick={() => setMore((prev) => !prev)}>Toggle text</button>
       {isMore && (
-        <p>
+        <p data-testid="toggle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
           quia labore illum error quo magni neque aliquam nesciunt? Provident,
           corrupti temporibus nesciunt, repudiandae necessitatibus accusamus
