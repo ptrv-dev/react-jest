@@ -9,22 +9,26 @@ const UsersPage = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="users">
-        {users.map((user) => (
-          <div key={user.id} className="user">
-            Name: {user.name}
-            <br />
-            Username: {user.username}
-            <br />
-            Email: {user.email}
-            <br />
-            Phone: {user.phone}
-            <br />
-            Website: {user.website}
-          </div>
-        ))}
-      </div>
+    <div className="container" data-testid="users-container">
+      {!users.length ? (
+        'Users list is empty...'
+      ) : (
+        <div className="users">
+          {users.map((user) => (
+            <div key={user.id} className="user" data-testid="user">
+              Name: {user.name}
+              <br />
+              Username: {user.username}
+              <br />
+              Email: {user.email}
+              <br />
+              Phone: {user.phone}
+              <br />
+              Website: {user.website}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
