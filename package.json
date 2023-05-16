@@ -42,7 +42,7 @@
       "^.+\\.[t|j]sx?$": "babel-jest"
     },
     "transformIgnorePatterns": [
-      "node_modules/"
+      "node_modules/(?!axios).*/"
     ]
   }
 }
