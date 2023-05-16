@@ -11,33 +11,35 @@ const LoginForm = () => {
     setPassword('');
   };
   return (
-    <form className="form" onSubmit={handleSubmit} data-testid="form">
-      <div className="form__field">
-        <label htmlFor="username">Username:</label>
-        <input
-          id="username"
-          type="text"
-          placeholder="Username..."
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          data-testid="username"
-        />
-      </div>
-      <div className="form__field">
-        <label htmlFor="password">Password:</label>
-        <input
-          id="password"
-          type="password"
-          value={password}
-          placeholder="*******"
-          onChange={(e) => setPassword(e.target.value)}
-          data-testid="password"
-        />
-      </div>
-      <button className="form__submit" type="submit" data-testid="submit">
-        Login
-      </button>
-    </form>
+    <div className="container">
+      <form className="form" onSubmit={handleSubmit} data-testid="form">
+        <div className="form__field">
+          <label htmlFor="username">Username:</label>
+          <input
+            id="username"
+            type="text"
+            placeholder="Username..."
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            data-testid="username"
+          />
+        </div>
+        <div className="form__field">
+          <label htmlFor="password">Password:</label>
+          <input
+            id="password"
+            type="password"
+            value={password}
+            placeholder="*******"
+            onChange={(e) => setPassword(e.target.value)}
+            data-testid="password"
+          />
+        </div>
+        <button className="form__submit" type="submit" data-testid="button">
+          Login
+        </button>
+      </form>
+    </div>
   );
 };
 
