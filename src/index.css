@@ -44,3 +44,14 @@ footer .container {
   text-align: center;
   padding: 1rem;
 }
+
+.users {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user {
+  background: #eee;
+  padding: 1rem;
+}
